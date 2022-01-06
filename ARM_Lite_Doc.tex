@@ -33,7 +33,43 @@
 \frontmatter
 \tableofcontents
 
+\chapter{Preface}
+
+Before you comb through the contents of \textbf{ARM Lite} CPU design, a brief understanding of systematic design work is like can be beneficial.
+The impression of developing this project is that it is by no means easy but the whole system we build rewards us with great fulfillment.
+This project features the pipelined CPU with hazard detection and forwarding, which leads to a lot of difficulty in implementation.
+
+The project uses \texttt{Verilog} on Xilinx Vivado 2017.4 and has been tested both on Ubuntu and Windows.
+Apart from the hardware implementation of the CPU, the project also contains a compiler that translates ARM (64-bit) code into machine code using \texttt{C++}.
+
+The authors would like to thank Man Feng and Xudong Ma for their assistance for their guidance and assistance in pipelined CPU design.
+This work is originally the course project for \textsc{Digital Design and Computer Architecture}, 2021 Fall of Southeast University.
+
+There may be errors in this project and you are welcome to pull request on GitHub or contact the author via E-Mail: \href{mailto:wqzhao@seu.edu.cn}{wqzhao@seu.edu.cn}.\\
+
+\begin{flushright}
+  \begin{minipage}{5cm}
+    \centering
+    {\sffamily\large Wuqiong Zhao} \\
+    Jan. 7, 2022 \\
+    At Southeast University
+  \end{minipage}
+\end{flushright}
+
 \mainmatter
+
+\chapter{Brief Introduction}
+
+  \section{Project Host Information}
+
+    The project of ARM Lite is open source and hosted on GitHub: \href
+  {https://github.com/Teddy-van-Jerry/ARM_Lite}{github.com/Teddy-van-Jerry/ARM\_Lite} with the official website at \href{https://arm-lite.teddy-van-jerry.org}{arm-lite.teddy-van-jerry.org}.
+
+  You can fork the project repository or download source code at the release page.
+  Since this project is licensed under thr MIT License,
+  you are free to use it 
+
+  \section{Project Target}
 
 \chapter{Elegant\LaTeX{} Templates}
 Elegant\LaTeX{} Program developers are intended to provide you beautiful, elegant, user-friendly templates. Currently, the Elegant\LaTeX{} is composed of \href{https://github.com/ElegantLaTeX/ElegantNote}{ElegantNote}, \href{https://github.com/ElegantLaTeX/ElegantBook}{ElegantBook}, \href{https://github.com/ElegantLaTeX/ElegantPaper}{ElegantPaper}, designed for typesetting notes, books, and working papers respectively. Latest releases are strongly recommended! This guide is aimed at briefly introducing the 101 of this template. For any other question, suggestion or comment, feel free to contact us on GitHub \href{https://github.com/ElegantLaTeX/ElegantBook/issues}{issues} or email us at \email{elegantlatex2e@gmail.com}.
@@ -645,54 +681,26 @@ We list some FAQs for users to refer to:
 \end{enumerate}
 
 \chapter{Version History}
-We revised our templates now and then. This section shows the version story of ElegantBook. We have nearly 100 submits and 17 releases on GitHub since uploaded.
+We revised our project now and then. This section shows the version story of ARM Lite. We have 24 commits and 2 releases on GitHub.
 
 
-\datechange{2021/05/02}{release of v4.1.}
+\datechange{2022/01/07}{release of v2.0}
 
 \begin{change}
-  \item \textbf{! Big Change}: Change the bibliography method from \hologo{BibTeX} to biblatex(with backend  \lstinline{biber});
-  \item \textbf{! Big Change}: Add support for the default theorem writing method (with optional name and label);
-  \item Add left and right space;
-  \item Support hyperlink from the text of TOC;
-  \item Remove the \hologo{pdfLaTeX} compatiblity check for Chinese.
-  \item Add multilingual support, for french \lstinline{lang=fr}, dutch \lstinline{lang=nl}, Hungarian  \lstinline{lang=hu}, Spanish \lstinline{lang=es}, Mongolian \lstinline{lang=mn} etc.
+  \item 
 \end{change}
 
-\datechange{2020/04/12}{release of v3.11, \textcolor{red}{\textbf{LAST} version of 3.x}.}
-
+\datechange{2021/12/24}{release of v1.1}
 
 \begin{change}
-  \item \textbf{! Fix}: Fix \lstinline{natbib option clash} problems caused by \lstinline{gbt7714} updates.
-  \item Remove \lstinline{base} decorations and its options since \lstinline{pgfornament} package is not included in \TeX{} Live 2020.
-  \item Fix spacing problem in some environments.
-  \item Introduce language option for Italian, \lstinline{lang=it}.
+  \item 
 \end{change}
 
-
-\datechange{2020/02/10}{release of v3.10}
-
-\begin{change}
-  \item Introduce \lstinline{math} for math font, optional styles are \lstinline{newtx} and \lstinline{cm}.\\
-  \textbf{Notice}: The math font \lstinline{newtxmath} in previous versions is reset to default \LaTeX{} math font, to keep previous math font, please declare \lstinline{math=newtx}.
-  \item Introduce \lstinline{chinesefont} option, with \lstinline{founder}, \lstinline{ctexfont} and \lstinline{nofont} available.
-  \item Turn author information on the cover optional and add customized command \lstinline{\bioinfo}.
-  \item Add version history with command \lstinline{\datechange} and environment \lstinline{change}.
-  \item Add Chinese chapter style \lstinline{scheme} with option \lstinline{chinese}.
-  \item Since the bug raised by \lstinline{\lvert} is fixed, exchange package positions of \lstinline{ctex} and \lstinline{amsmath}.
-  \item Drop \lstinline{\lastpage} from header to avoid page anchor bug and adding \lstinline{\frontmatter}.
-  \item Revise bibliography option \lstinline{cite} with optional styles \lstinline{numbers},\lstinline{authoryear} and \lstinline{super}.
-  \item Introduce bibliography style option \lstinline{bibstyle}, with default bib style \lstinline{apalike} for English mode and \lstinline{gbt7714} package for Chinese mode.
-\end{change}
-
-\datechange{2019/08/18}{release of v3.09}
+\datechange{2021/12/23}{release of v1.0}
 
 \begin{change}
-  \item Remove \lstinline{\elegantpar} temporary and remind users to use \lstinline{\marginnote} and \lstinline{\marginpar} instead.
-  \item Use \lstinline{esint} to display integral operator.
-  \item Add new command \lstinline{toc}, with options  \lstinline{onecol} and \lstinline{twocol}.
-  \item Add new option \lstinline{cite} \lstinline{super} for superscript-displayed citation.
-  \item Revise \lstinline{problemset}.
+  \item Work based on \href{https://github.com/nxbyte/ARM-LEGv8}{ARM-LEGv8} (pipelined with hazard detection and forwarding) is implemented on Xilinx Vivado 2017.4 both on Ubuntu and Windows.
+  \item Create the Visio Drawing for the CPU architecture.
 \end{change}
 
 \nocite{en2,en3}
